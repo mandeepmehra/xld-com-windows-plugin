@@ -1,4 +1,4 @@
-copy ${step.uploadedArtifactPath} ${deployed.targetDirectory}
+copy /Y ${step.uploadedArtifactPath} ${deployed.targetDirectory}
 IF %ERRORLEVEL% NEQ 0 EXIT /b %ERRORLEVEL%
 
 cscript managecomdll.vbs -app ${deployed.appName} -dll ${deployed.targetFileName} -com ${deployed.componentName} -remove
