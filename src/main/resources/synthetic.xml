@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+    Note: If you modify this file, you must restart the XL Deploy server.
+-->
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+<type type="windows.COMComponent" extends="generic.ExecutedScript" deployable-type="windows.COMComponentFile" container-type="overthere.SmbHost">
+
+	<generate-deployable type="windows.COMComponentFile" extends="generic.File"/>
+	<property name="appName" default="TEST" />
+	<property name="targetDirectory" default="c:\flexcube\exe" />
+	<property name="targetFileName" default="${deployed.name}" hidden="true"/>
+	<property name="templateClasspathResources" kind="set_of_string" 
+        default="wincom/installcomdll.vbs,wincom/uninstallcomdll.vbs" hidden="true"/>
+	<property name="createOrder" hidden="false" kind="integer"/>
+	<property name="createScript" default="wincom/runinstallcomdll.bat"    hidden="true" />
+	<property name="updateScript" default="wincom/runinstallcomdll.bat"    hidden="true" />
+	<property name="destroyScript" default="wincom/rununinstallcomdll.bat" hidden="true" />
+</type>
+
+</synthetic>

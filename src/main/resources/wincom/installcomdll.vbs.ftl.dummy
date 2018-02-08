@@ -1,0 +1,2 @@
+
+Wscript.echo "this is coming from a vbscript"
