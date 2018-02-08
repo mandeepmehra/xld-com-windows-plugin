@@ -1,1 +1,1 @@
-cscript install.vbs
+echo To be Implemented
