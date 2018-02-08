@@ -20,4 +20,17 @@
 	<property name="destroyScript" default="wincom/rununinstallcomdll.bat" hidden="true" />
 </type>
 
+<type type="windows.DLL" extends="generic.ExecutedScript" deployable-type="windows.DLLFile" container-type="overthere.SmbHost">
+
+	<generate-deployable type="windows.DLLFile" extends="generic.File"/>
+	<property name="targetDirectory" />
+	<property name="targetFileName" default="${deployed.name}" hidden="true"/>
+	<property name="createOrder" hidden="false" kind="integer"/>
+	<property name="createScript" default="wincom/registerdll.bat"    hidden="true" />
+	<property name="updateScript" default="wincom/registerdll.bat"    hidden="true" />
+	<property name="destroyScript" default="wincom/unregisterdll.bat" hidden="true" />
+</type>
+
+
+
 </synthetic>
