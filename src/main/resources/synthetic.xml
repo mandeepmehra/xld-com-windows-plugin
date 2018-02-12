@@ -5,7 +5,7 @@
 <synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 
-<type type="windows.COMComponent" extends="generic.ExecutedScript" deployable-type="windows.COMComponentFile" container-type="overthere.SmbHost">
+<type type="windows.COMComponent" extends="generic.ExecutedScript" deployable-type="windows.COMComponentFile" container-type="overthere.CifsHost">
 
 	<generate-deployable type="windows.COMComponentFile" extends="generic.File"/>
 	<property name="appName"  />
@@ -20,7 +20,7 @@
 	<property name="destroyScript" default="wincom/rununinstallcomdll.bat" hidden="true" />
 </type>
 
-<type type="windows.DLL" extends="generic.ExecutedScript" deployable-type="windows.DLLFile" container-type="overthere.SmbHost">
+<type type="windows.DLL" extends="generic.ExecutedScript" deployable-type="windows.DLLFile" container-type="overthere.CifsHost">
 
 	<generate-deployable type="windows.DLLFile" extends="generic.File"/>
 	<property name="targetDirectory" />
