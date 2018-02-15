@@ -1,5 +1,5 @@
 cscript managecomdll.vbs -app ${deployed.appName} -dll ${deployed.targetFileName} -com ${deployed.componentName} -remove
-IF %ERRORLEVEL% NEQ 0 THEN EXIT /b %ERRORLEVEL% ELSE ECHO "COM component removed" END IF
+IF %ERRORLEVEL% NEQ 0 (EXIT /b %ERRORLEVEL%) ELSE (ECHO "COM component removed")
 
 regsvr32 -u -s ${deployed.targetDirectory}\${deployed.targetFileName}
 IF %ERRORLEVEL% EQU 0 echo "Error in unregistering DLL"
